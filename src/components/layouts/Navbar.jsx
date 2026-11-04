@@ -20,7 +20,7 @@ export default function Navbar({ language, setLanguage }) {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-[#eadfce] bg-[#faf7f0]/95 backdrop-blur-lg">
       <div className="mx-auto flex h-[74px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-10">
         <Link to="/" onClick={() => setOpen(false)} className="flex shrink-0 items-center gap-2.5">
-          <span className="grid h-10 w-10 place-items-center rounded-full border border-[#c7a675] text-[#873b35]"><Flower2 size={23}/></span>
+          <span className="grid h-10 w-10 place-items-center rounded-full border border-[#c7a675] text-[#873b35]"><img src="/logo.png" alt="logo" /></span>
           <span><strong className="block font-display text-[19px] leading-5 tracking-wide sm:text-[22px]">Kamdhenu</strong><small className="mt-1 block text-[8px] font-bold tracking-[2.2px] text-[#873b35]">MANGAL KARYALAY</small></span>
         </Link>
         <nav className="hidden items-center gap-7 lg:flex">
