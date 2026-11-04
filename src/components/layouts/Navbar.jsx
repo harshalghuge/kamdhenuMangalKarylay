@@ -21,7 +21,7 @@ export default function Navbar({ language, setLanguage }) {
       <div className="mx-auto flex h-[74px] max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-10">
         <Link to="/" onClick={() => setOpen(false)} className="flex shrink-0 items-center gap-2.5">
           <span className="grid h-10 w-10 place-items-center rounded-full border border-[#c7a675] text-[#873b35]"><img src="/logo.png" alt="logo" /></span>
-          <span><strong className="block font-display text-[19px] leading-5 tracking-wide sm:text-[22px]">Kamdhenu</strong><small className="mt-1 block text-[8px] font-bold tracking-[2.2px] text-[#873b35]">MANGAL KARYALAY</small></span>
+          <span><strong className="block font-display text-[19px] leading-5 tracking-wide sm:text-[22px]">{mr ? "कामधेनु" : "Kamdhenu"}</strong><small className="mt-1 block text-[9px] font-bold tracking-[1px] ml-1 text-[#873b35]">{mr ? "  मंगल कार्यालय" : "MANGAL KARYALAY"}</small></span>
         </Link>
         <nav className="hidden items-center gap-7 lg:flex">
           {items.map(item => <NavLink key={item.path} to={item.path} className={navClass}>{mr ? item.mr : item.en}</NavLink>)}
@@ -40,7 +40,7 @@ export default function Navbar({ language, setLanguage }) {
       {open && <>
         <motion.button aria-label="Close navigation" onClick={() => setOpen(false)} className="fixed inset-0 z-40 bg-black/40 lg:hidden" initial={{opacity:0}} animate={{opacity:1}} exit={{opacity:0}}/>
         <motion.aside initial={{x:"100%"}} animate={{x:0}} exit={{x:"100%"}} transition={{duration:.22}} className="fixed right-0 top-0 z-50 h-[100dvh] w-[84%] max-w-sm bg-[#faf7f0] px-6 pb-8 pt-24 shadow-2xl lg:hidden">
-          <p className="mb-6 text-[10px] font-bold tracking-[3px] text-[#b18a55]">EXPLORE SHUBHAM</p>
+          <p className="mb-6 text-[10px] font-bold tracking-[3px] text-[#b18a55]">EXPLORE Kamdhenu</p>
           <nav>{items.map(item => <NavLink key={item.path} to={item.path} onClick={() => setOpen(false)} className={({isActive}) => `flex items-center justify-between border-b border-[#e9dfd0] py-5 text-lg ${isActive ? "font-bold text-[#873b35]" : "text-[#30221e]"}`}>{mr ? item.mr : item.en}<ChevronRight size={18}/></NavLink>)}</nav>
           <a href={business.callLink} className="mt-8 flex items-center justify-center gap-2 rounded-full bg-[#873b35] py-4 font-semibold text-white"><Phone size={17}/>{mr ? "कॉल करा" : "Call Now"}</a>
           <p className="mt-5 text-center text-xs leading-6 text-[#897b70]">{business.address}</p>

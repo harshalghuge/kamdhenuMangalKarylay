@@ -168,7 +168,7 @@ export default function Home({ language }) {
             </motion.p>
           </motion.div>
         </div>
-        <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-[#faf7f0] to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-18 bg-gradient-to-t from-[#faf7f0] to-transparent" />
       </section>
 
       <section className="relative overflow-hidden bg-[#faf4e8] px-5 py-20 sm:px-8 md:py-28">
