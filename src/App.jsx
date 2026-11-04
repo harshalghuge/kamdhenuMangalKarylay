@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/layouts/Navbar";
-import MobileBottomBar from "./components/layouts/MobileBottomBar";
+import FloatingContact from "./components/layouts/FloatingContact";
 import Footer from "./components/layouts/Footer";
 import Home from "./pages/Home";
 import Halls from "./pages/Halls";
@@ -21,7 +21,7 @@ function Website() {
         <Route path="*" element={<Home language={language} />} />
       </Routes>
       <Footer language={language} />
-      <MobileBottomBar language={language} />
+      <FloatingContact language={language} /> 
     </>
   );
 }
